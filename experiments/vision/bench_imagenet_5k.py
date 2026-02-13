@@ -43,7 +43,7 @@ class ImageListDataset(torch.utils.data.Dataset):
             image = self.transform(image)
         return image, 0  # Dummy label
 
-def load_imagenet_subset(data_dir: str = "./data/imagenet", n_samples: int = 500):
+def load_imagenet_subset(data_dir: str = "./data/imagenet", n_samples: int = 5000):
     """Load a subset of ImageNet validation set."""
     transform = transforms.Compose([
         transforms.Resize(256),
@@ -181,8 +181,8 @@ def main():
         print("Error: No ImageNet samples found. Please run download_imagenet_samples.py first.")
         return
 
-    runner = MultiSeedRunner(n_seeds=5)
-    n_test = 50  # We scale results by 10 internally to report "5k samples equivalent"
+    runner = MultiSeedRunner(n_seeds=10)
+    n_test = 5000  # Full 5K validation set
     
     print("\nRunning ImageNet Benchmarks...")
     
@@ -197,7 +197,7 @@ def main():
     latex = generate_latex_comparison_table(
         methods=results,
         metrics=['fidelity', 'sparsity'],
-        caption="ImageNet-1K Large-Scale Evaluation ($N=5,000$ samples)",
+        caption="ImageNet Large-Scale Evaluation ($N=5,000$ samples)",
         label="tab:imagenet_large"
     )
     
