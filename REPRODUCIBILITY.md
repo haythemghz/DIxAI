@@ -1,6 +1,8 @@
 # Reproducibility Guide
 
-This document provides instructions to reproduce the results presented in the paper **"Decision-Information eXplanations (DIxAI): Hardening Interpretable AI via the Information Bottleneck"**.
+This document provides instructions to reproduce the results presented in the paper **"Decision-Information Explanations (DIxAI)"**.
+
+To generate the statistical bounds reported in the paper (Tables 1, 2, 3), we run the benchmarks across **10 independent random seeds** (0-9).
 
 ## 1. Environment Setup
 

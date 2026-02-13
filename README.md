@@ -30,7 +30,7 @@ Reproduce the multi-seed stability analysis and baseline comparison on the Iris 
 # Run Baseline Comparison (DIxAI vs L2X vs Integrated Gradients)
 python experiments/benchmark/bench_tabular_baselines.py
 
-# Run Multi-Seed Statistical Analysis (N=5)
+# Run Multi-Seed Statistical Analysis (N=10)
 python experiments/benchmark/bench_robustness.py
 ```
 

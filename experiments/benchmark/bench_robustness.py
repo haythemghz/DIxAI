@@ -76,7 +76,7 @@ def cohens_d(x, y):
 # --- Main Benchmark ---
 
 def run_multiseed():
-    seeds = [42, 43, 44, 45, 46]
+    seeds = [42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Running Rigorous Multi-Seed Benchmark on {device} (Seeds={len(seeds)})")
     
@@ -144,7 +144,7 @@ def run_multiseed():
             })
             
     # --- Statistical Analysis ---
-    report = "\n--- Statistical Report (N=5 Seeds) ---\n"
+    report = "\n--- Statistical Report (N=10 Seeds) ---\n"
     dataframes = {}
     
     for m in ['DIxAI', 'L2X', 'IG']:

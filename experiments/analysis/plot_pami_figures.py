@@ -81,7 +81,7 @@ def plot_pami_figures():
             df_melt = df_seed.melt(id_vars=['Method'], value_vars=['Fidelity', 'Sparsity'], var_name='Metric', value_name='Score')
             
             sns.boxplot(data=df_melt, x='Method', y='Score', hue='Metric', palette=['#3498db', '#e74c3c'])
-            plt.title('Stability Across Random Seeds (N=5)', fontsize=14, fontweight='bold')
+            plt.title('Stability Across Random Seeds (N=10)', fontsize=14, fontweight='bold')
             plt.xlabel('Method', fontsize=12)
             plt.ylabel('Score Distribution', fontsize=12)
             plt.ylim(0, 1.1)
